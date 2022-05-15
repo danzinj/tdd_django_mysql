@@ -1,1 +1,1 @@
-web: gunicorn TDD_BUSCA_ANIMAL.wsgi
+web: gunicorn SETUP.wsgi
