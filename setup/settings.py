@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path, os
 import django_heroku
+from django.core.wsgi import get_wsgi_application
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,3 +134,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 django_heroku.settings(locals())
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "myproject.settings.local")
+
+application = get_wsgi_application()
