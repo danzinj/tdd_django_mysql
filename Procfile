@@ -1,1 +1,1 @@
-web: gunicorn SETUP.wsgi
+web: gunicorn SETUP.wsgi.cpython-310
